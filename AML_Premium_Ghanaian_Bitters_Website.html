@@ -1,0 +1,1530 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="AFROMAFIA LIQUOR (AML) & COMPANY LIMITED — Premium Ghanaian bitters and alcoholic beverages. Experience exceptional taste and quality.">
+
+    <meta name="keywords"
+          content="AML Bitters, NII-NAA Bitters, Ghana bitters, Ghana liquor, premium bitters, alcohol Ghana">
+
+    <meta name="author" content="AFROMAFIA LIQUOR (AML) & COMPANY LIMITED">
+
+    <title>AML | Premium Ghanaian Bitters</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <style>
+
+        /* =========================
+           GLOBAL
+        ========================= */
+
+        :root {
+            --black: #080808;
+            --dark: #111111;
+            --gold: #d4af37;
+            --gold-light: #f3d675;
+            --red: #7c1111;
+            --red-light: #a51b1b;
+            --white: #ffffff;
+            --gray: #b8b8b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--black);
+            color: var(--white);
+            font-family: "Montserrat", sans-serif;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1200px, 92%);
+            margin: auto;
+        }
+
+        .gold {
+            color: var(--gold);
+        }
+
+        /* =========================
+           AGE VERIFICATION
+        ========================= */
+
+        #ageGate {
+            position: fixed;
+            inset: 0;
+            background:
+                linear-gradient(rgba(0,0,0,.88), rgba(0,0,0,.96)),
+                url("images/hero.jpg") center/cover;
+            z-index: 9999;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 20px;
+        }
+
+        .age-box {
+            width: min(520px, 100%);
+            text-align: center;
+            padding: 55px 35px;
+
+            background: rgba(10,10,10,.95);
+            border: 1px solid rgba(212,175,55,.55);
+            box-shadow: 0 0 60px rgba(212,175,55,.15);
+        }
+
+        .age-logo {
+            font-family: "Cinzel", serif;
+            font-size: 44px;
+            color: var(--gold);
+            font-weight: 700;
+            letter-spacing: 6px;
+            margin-bottom: 20px;
+        }
+
+        .age-box h2 {
+            font-family: "Cinzel", serif;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .age-box p {
+            color: var(--gray);
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .age-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .btn {
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+            padding: 14px 28px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            transition: .3s;
+        }
+
+        .btn-gold {
+            background: var(--gold);
+            color: #000;
+        }
+
+        .btn-gold:hover {
+            background: var(--gold-light);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 1px solid var(--gold);
+        }
+
+        .btn-outline:hover {
+            background: var(--gold);
+            color: #000;
+        }
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(5,5,5,.88);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(212,175,55,.15);
+        }
+
+        nav {
+            height: 78px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: "Cinzel", serif;
+            color: var(--gold);
+            font-weight: 800;
+            font-size: 27px;
+            letter-spacing: 4px;
+        }
+
+        .logo span {
+            display: block;
+            font-family: "Montserrat", sans-serif;
+            color: white;
+            font-size: 8px;
+            letter-spacing: 3px;
+            text-align: center;
+            margin-top: -3px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: .3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .menu {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: var(--gold);
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+
+            background:
+                linear-gradient(90deg,
+                rgba(0,0,0,.97) 0%,
+                rgba(0,0,0,.72) 48%,
+                rgba(0,0,0,.3) 100%),
+                url("images/hero.jpg") center/cover;
+        }
+
+        .hero-content {
+            max-width: 700px;
+            padding-top: 80px;
+        }
+
+        .eyebrow {
+            color: var(--gold);
+            letter-spacing: 5px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-family: "Cinzel", serif;
+            font-size: clamp(48px, 7vw, 92px);
+            line-height: 1;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: var(--gold);
+        }
+
+        .hero p {
+            max-width: 570px;
+            color: #ddd;
+            line-height: 1.8;
+            margin-bottom: 35px;
+            font-size: 16px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        /* =========================
+           SECTION
+        ========================= */
+
+        section {
+            padding: 100px 0;
+        }
+
+        .section-heading {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 55px;
+        }
+
+        .section-heading small {
+            color: var(--gold);
+            letter-spacing: 4px;
+            font-weight: 700;
+        }
+
+        .section-heading h2 {
+            font-family: "Cinzel", serif;
+            font-size: clamp(32px, 5vw, 50px);
+            margin: 12px 0 18px;
+        }
+
+        .section-heading p {
+            color: var(--gray);
+            line-height: 1.8;
+        }
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about {
+            background: #0e0e0e;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about-image {
+            min-height: 500px;
+
+            background:
+                linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.35)),
+                url("images/about.jpg") center/cover;
+
+            border: 1px solid rgba(212,175,55,.3);
+        }
+
+        .about-text h3 {
+            font-family: "Cinzel", serif;
+            font-size: 38px;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            color: var(--gray);
+            line-height: 1.9;
+            margin-bottom: 18px;
+        }
+
+        .signature {
+            color: var(--gold);
+            font-family: "Cinzel", serif;
+            margin-top: 25px;
+            font-size: 20px;
+        }
+
+        /* =========================
+           PRODUCTS
+        ========================= */
+
+        .products {
+            background: var(--black);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .product-card {
+            background: #101010;
+            border: 1px solid rgba(212,175,55,.18);
+            transition: .4s;
+            overflow: hidden;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(212,175,55,.7);
+            box-shadow: 0 20px 50px rgba(0,0,0,.5);
+        }
+
+        .product-image {
+            height: 390px;
+            background: #171717;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 25px;
+        }
+
+        .product-image img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .product-info {
+            padding: 28px;
+        }
+
+        .product-info h3 {
+            font-family: "Cinzel", serif;
+            color: var(--gold);
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+
+        .product-info p {
+            color: var(--gray);
+            line-height: 1.7;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .product-meta {
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid #292929;
+            padding-top: 15px;
+            color: #ddd;
+            font-size: 12px;
+        }
+
+        /* =========================
+           QUALITY
+        ========================= */
+
+        .quality {
+            background:
+                linear-gradient(rgba(124,17,17,.85), rgba(0,0,0,.92)),
+                url("images/quality.jpg") center/cover;
+        }
+
+        .quality-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .quality-box {
+            text-align: center;
+            padding: 40px 25px;
+            background: rgba(0,0,0,.45);
+            border: 1px solid rgba(255,255,255,.15);
+        }
+
+        .quality-icon {
+            font-size: 38px;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        .quality-box h3 {
+            font-family: "Cinzel", serif;
+            margin-bottom: 15px;
+        }
+
+        .quality-box p {
+            color: #ccc;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        /* =========================
+           GALLERY
+        ========================= */
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+        }
+
+        .gallery-item {
+            height: 300px;
+            overflow: hidden;
+            background: #151515;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: .5s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+        /* =========================
+           CTA
+        ========================= */
+
+        .cta {
+            text-align: center;
+            background:
+                radial-gradient(circle at center,
+                rgba(124,17,17,.35),
+                transparent 60%),
+                #0b0b0b;
+        }
+
+        .cta h2 {
+            font-family: "Cinzel", serif;
+            font-size: clamp(35px, 5vw, 60px);
+            margin-bottom: 20px;
+        }
+
+        .cta p {
+            color: var(--gray);
+            margin-bottom: 30px;
+        }
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            background: #0e0e0e;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info h3 {
+            font-family: "Cinzel", serif;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            color: var(--gray);
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .contact-item {
+            margin-bottom: 18px;
+        }
+
+        .contact-item strong {
+            color: var(--gold);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .contact-item span,
+        .contact-item a {
+            color: #ddd;
+        }
+
+        .contact-form {
+            display: grid;
+            gap: 15px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            background: #181818;
+            border: 1px solid #333;
+            color: white;
+            padding: 16px;
+            outline: none;
+            font-family: inherit;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: var(--gold);
+        }
+
+        .contact-form textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            padding: 50px 0 25px;
+            background: #050505;
+            border-top: 1px solid rgba(212,175,55,.2);
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            padding-bottom: 35px;
+        }
+
+        .footer-brand h2 {
+            font-family: "Cinzel", serif;
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+
+        .footer-brand p {
+            color: var(--gray);
+            max-width: 350px;
+            line-height: 1.7;
+            font-size: 13px;
+        }
+
+        .socials {
+            display: flex;
+            gap: 12px;
+        }
+
+        .socials a {
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #444;
+            transition: .3s;
+        }
+
+        .socials a:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        .copyright {
+            border-top: 1px solid #222;
+            padding-top: 20px;
+            color: #777;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        /* =========================
+           WHATSAPP
+        ========================= */
+
+        .whatsapp {
+            position: fixed;
+            right: 25px;
+            bottom: 25px;
+            z-index: 999;
+
+            width: 58px;
+            height: 58px;
+
+            background: #25D366;
+            color: white;
+
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 27px;
+
+            box-shadow: 0 8px 30px rgba(0,0,0,.4);
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media(max-width: 900px) {
+
+            .nav-links {
+                position: absolute;
+                top: 78px;
+                left: 0;
+                width: 100%;
+
+                background: #080808;
+
+                flex-direction: column;
+                align-items: center;
+
+                padding: 30px;
+
+                display: none;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu {
+                display: block;
+            }
+
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .product-grid,
+            .quality-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media(max-width: 600px) {
+
+            section {
+                padding: 75px 0;
+            }
+
+            .product-grid,
+            .quality-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .gallery-item {
+                height: 200px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+            }
+
+            .hero {
+                background-position: 65% center;
+            }
+
+            .hero-content {
+                padding-top: 100px;
+            }
+
+            .age-buttons {
+                flex-direction: column;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+<!-- =========================
+     AGE VERIFICATION
+========================= -->
+
+<div id="ageGate">
+
+    <div class="age-box">
+
+        <div class="age-logo">AML</div>
+
+        <h2>WELCOME TO AML</h2>
+
+        <p>
+            This website contains information about alcoholic beverages.
+            You must be of legal drinking age in your country to enter.
+        </p>
+
+        <div class="age-buttons">
+
+            <button class="btn btn-gold" onclick="enterSite()">
+                I AM OF LEGAL AGE
+            </button>
+
+            <button class="btn btn-outline" onclick="leaveSite()">
+                EXIT
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<header>
+
+    <div class="container">
+
+        <nav>
+
+            <a href="#home" class="logo">
+                AML
+                <span>AFROMAFIA LIQUOR</span>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#products">PRODUCTS</a></li>
+                <li><a href="#quality">QUALITY</a></li>
+                <li><a href="#gallery">GALLERY</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+
+            </ul>
+
+            <div class="menu" onclick="toggleMenu()">
+                ☰
+            </div>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                ESTABLISHED 2022 • GHANA
+            </div>
+
+            <h1>
+                EXPERIENCE
+                <span>THE TASTE</span>
+            </h1>
+
+            <p>
+                Discover a distinctive Ghanaian drinking experience
+                crafted with character, tradition and exceptional taste.
+                Welcome to AFROMAFIA LIQUOR (AML) & COMPANY LIMITED.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#products" class="btn btn-gold">
+                    EXPLORE PRODUCTS
+                </a>
+
+                <a href="#contact" class="btn btn-outline">
+                    CONTACT US
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section class="about" id="about">
+
+    <div class="container">
+
+        <div class="about-grid">
+
+            <div class="about-image"></div>
+
+            <div class="about-text">
+
+                <div class="eyebrow">
+                    OUR STORY
+                </div>
+
+                <h3>
+                    Crafted With
+                    <span class="gold">Character</span>
+                </h3>
+
+                <p>
+                    AFROMAFIA LIQUOR (AML) & COMPANY LIMITED is a
+                    Ghanaian beverage company focused on creating
+                    distinctive alcoholic drinks for consumers who
+                    appreciate bold taste and memorable experiences.
+                </p>
+
+                <p>
+                    Our approach combines carefully selected ingredients,
+                    thoughtful preparation and a strong appreciation for
+                    Ghanaian culture.
+                </p>
+
+                <p>
+                    Every bottle represents our commitment to creating
+                    products that bring people together and make every
+                    occasion memorable.
+                </p>
+
+                <div class="signature">
+                    AML — Taste. Character. Experience.
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PRODUCTS
+========================= -->
+
+<section class="products" id="products">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <small>OUR COLLECTION</small>
+
+            <h2>Premium Products</h2>
+
+            <p>
+                Explore our collection of distinctive alcoholic beverages.
+            </p>
+
+        </div>
+
+
+        <div class="product-grid">
+
+
+            <!-- PRODUCT 1 -->
+
+            <div class="product-card">
+
+                <div class="product-image">
+
+                    <!-- Replace with actual bottle image -->
+
+                    <img src="images/nii-naa-bitters.png"
+                         alt="NII-NAA Bitters">
+
+                </div>
+
+                <div class="product-info">
+
+                    <h3>NII-NAA BITTERS</h3>
+
+                    <p>
+                        A bold and distinctive bitters experience
+                        created for those who appreciate character
+                        and flavour.
+                    </p>
+
+                    <div class="product-meta">
+
+                        <span>PREMIUM BITTERS</span>
+
+                        <span>40% ALC.</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 2 -->
+
+            <div class="product-card">
+
+                <div class="product-image">
+
+                    <img src="images/product-2.png"
+                         alt="AML Premium Bitters">
+
+                </div>
+
+                <div class="product-info">
+
+                    <h3>AML PREMIUM</h3>
+
+                    <p>
+                        A carefully crafted beverage designed to deliver
+                        a rich and memorable drinking experience.
+                    </p>
+
+                    <div class="product-meta">
+
+                        <span>AML COLLECTION</span>
+
+                        <span>40% ALC.</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 3 -->
+
+            <div class="product-card">
+
+                <div class="product-image">
+
+                    <img src="images/product-3.png"
+                         alt="AML Signature">
+
+                </div>
+
+                <div class="product-info">
+
+                    <h3>AML SIGNATURE</h3>
+
+                    <p>
+                        Discover the signature character of AML through
+                        a distinctive blend created for special occasions.
+                    </p>
+
+                    <div class="product-meta">
+
+                        <span>SIGNATURE SERIES</span>
+
+                        <span>40% ALC.</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     QUALITY
+========================= -->
+
+<section class="quality" id="quality">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <small>THE AML STANDARD</small>
+
+            <h2>Our Commitment</h2>
+
+            <p>
+                We focus on creating products that reflect quality,
+                character and a memorable Ghanaian experience.
+            </p>
+
+        </div>
+
+
+        <div class="quality-grid">
+
+
+            <div class="quality-box">
+
+                <div class="quality-icon">◆</div>
+
+                <h3>Quality</h3>
+
+                <p>
+                    We pay attention to ingredients, preparation
+                    and presentation throughout our production process.
+                </p>
+
+            </div>
+
+
+            <div class="quality-box">
+
+                <div class="quality-icon">✦</div>
+
+                <h3>Character</h3>
+
+                <p>
+                    Our products are designed to have a distinctive
+                    identity and memorable taste.
+                </p>
+
+            </div>
+
+
+            <div class="quality-box">
+
+                <div class="quality-icon">◈</div>
+
+                <h3>Ghanaian Spirit</h3>
+
+                <p>
+                    Our brand is proudly connected to Ghanaian creativity,
+                    culture and entrepreneurship.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     GALLERY
+========================= -->
+
+<section id="gallery">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <small>AML VISUALS</small>
+
+            <h2>Our Gallery</h2>
+
+            <p>
+                Replace these images with your official product,
+                bottle and brand photographs.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="gallery">
+
+        <div class="gallery-item">
+            <img src="images/gallery-1.jpg" alt="AML product">
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/gallery-2.jpg" alt="AML bottle">
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/gallery-3.jpg" alt="AML bitters">
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/gallery-4.jpg" alt="AML brand">
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CTA
+========================= -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <div class="eyebrow">
+            EXPERIENCE AML
+        </div>
+
+        <h2>
+            Taste The
+            <span class="gold">Difference</span>
+        </h2>
+
+        <p>
+            Interested in our products or placing an order?
+        </p>
+
+        <a class="btn btn-gold"
+           href="https://wa.me/233534935337?text=Hello%20AML%2C%20I%20would%20like%20to%20make%20an%20enquiry%20about%20your%20products."
+           target="_blank">
+            ORDER / ENQUIRE ON WHATSAPP
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="contact" id="contact">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <small>GET IN TOUCH</small>
+
+            <h2>Contact AML</h2>
+
+            <p>
+                For product enquiries, wholesale opportunities,
+                distribution and general enquiries, contact us.
+            </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+
+            <div class="contact-info">
+
+                <h3>
+                    Let's <span class="gold">Connect</span>
+                </h3>
+
+                <p>
+                    We welcome enquiries from customers, retailers,
+                    distributors and business partners.
+                </p>
+
+
+                <div class="contact-item">
+
+                    <strong>PHONE</strong>
+
+                    <a href="tel:+233534935337">
+                        053 493 5337
+                    </a>
+
+                    <br>
+
+                    <a href="tel:+233534967008">
+                        053 496 7008
+                    </a>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <strong>EMAIL</strong>
+
+                    <a href="mailto:amlcoltd12@gmail.com">
+                        amlcoltd12@gmail.com
+                    </a>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <strong>LOCATION</strong>
+
+                    <span>
+                        Ghana
+                    </span>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <strong>ESTABLISHED</strong>
+
+                    <span>
+                        2022
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <form class="contact-form"
+                  onsubmit="sendMessage(event)">
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Your Name"
+                    required>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Your Email"
+                    required>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="Phone Number">
+
+                <textarea
+                    id="message"
+                    placeholder="Your Message"
+                    required></textarea>
+
+                <button
+                    type="submit"
+                    class="btn btn-gold">
+
+                    SEND MESSAGE
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+
+                <h2>AML</h2>
+
+                <p>
+                    AFROMAFIA LIQUOR (AML) & COMPANY LIMITED.
+                    Premium Ghanaian alcoholic beverages.
+                </p>
+
+            </div>
+
+
+            <div class="socials">
+
+                <a href="#" aria-label="Instagram">
+                    IG
+                </a>
+
+                <a href="#" aria-label="Facebook">
+                    FB
+                </a>
+
+                <a href="#" aria-label="TikTok">
+                    TK
+                </a>
+
+                <a href="mailto:amlcoltd12@gmail.com">
+                    @
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 AFROMAFIA LIQUOR (AML) & COMPANY LIMITED.
+            All Rights Reserved.
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================
+     WHATSAPP
+========================= -->
+
+<a class="whatsapp"
+   href="https://wa.me/233534935337"
+   target="_blank"
+   aria-label="Contact AML on WhatsApp">
+
+    ☎
+
+</a>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+    /* =========================
+       AGE VERIFICATION
+    ========================= */
+
+    function enterSite() {
+
+        localStorage.setItem("amlAgeVerified", "true");
+
+        document.getElementById("ageGate").style.display = "none";
+
+    }
+
+
+    function leaveSite() {
+
+        window.location.href = "https://www.google.com";
+
+    }
+
+
+    window.addEventListener("load", function() {
+
+        const verified =
+            localStorage.getItem("amlAgeVerified");
+
+        if (verified === "true") {
+
+            document.getElementById("ageGate")
+                .style.display = "none";
+
+        }
+
+    });
+
+
+    /* =========================
+       MOBILE MENU
+    ========================= */
+
+    function toggleMenu() {
+
+        document
+            .getElementById("navLinks")
+            .classList
+            .toggle("active");
+
+    }
+
+
+    document.querySelectorAll(".nav-links a")
+        .forEach(function(link) {
+
+            link.addEventListener("click", function() {
+
+                document
+                    .getElementById("navLinks")
+                    .classList
+                    .remove("active");
+
+            });
+
+        });
+
+
+    /* =========================
+       CONTACT FORM
+    ========================= */
+
+    function sendMessage(event) {
+
+        event.preventDefault();
+
+        const name =
+            document.getElementById("name").value;
+
+        const email =
+            document.getElementById("email").value;
+
+        const phone =
+            document.getElementById("phone").value;
+
+        const message =
+            document.getElementById("message").value;
+
+
+        const text =
+            `Hello AML,
+
+Name: ${name}
+Email: ${email}
+Phone: ${phone}
+
+Message:
+${message}`;
+
+
+        const whatsappURL =
+            "https://wa.me/233534935337?text="
+            + encodeURIComponent(text);
+
+
+        window.open(
+            whatsappURL,
+            "_blank"
+        );
+
+    }
+
+</script>
+
+</body>
+</html>
+
+```
